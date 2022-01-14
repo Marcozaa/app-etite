@@ -1,0 +1,22 @@
+.middlecontent {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #3080e8;
+}
+.middlecontent > .col1,
+.middlecontent > .col2 {
+  margin: 1rem;
+  display: flex;
+}
+.middlecontent > .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middlecontent > button {
+  width: 40%;
+}

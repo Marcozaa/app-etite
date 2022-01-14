@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
+
+.header {
+  height: 60vh;
+  width: 100vw;
+  background: #ffc244;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.header > .top {
+  width: 100vw;
+  height: 60%;
+  display: flex;
+}
+
+.header > .bottom {
+  width: 100vw;
+}
+svg {
+  margin: 0;
+  padding: 0;
+}

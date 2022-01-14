@@ -1,0 +1,41 @@
+body {
+  overflow-x: hidden;
+}
+
+.containerRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.globe {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  height: 140px;
+
+  overflow: hidden;
+
+  transform: translate(-50%, -50%);
+  width: 140px;
+  transform: scale(2);
+}
+@media only screen and (max-width: 900px) {
+  .globe {
+    transform: scale(1);
+  }
+}
+.globe svg {
+  animation: rotation 5s linear 0s infinite;
+}
+.globe svg path {
+  stroke: #ffffff;
+}
+@keyframes rotation {
+  from {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-50%);
+  }
+}

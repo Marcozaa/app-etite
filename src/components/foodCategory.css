@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
+
+.foodcategory {
+  cursor: pointer;
+  margin: 0.5rem;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px #0000009d;
+  align-items: center;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
