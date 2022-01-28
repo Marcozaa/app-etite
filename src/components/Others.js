@@ -27,7 +27,7 @@ export default function Others() {
                 'Pizza', 
                 'Colazione', 
                 'Brasiliano'].map((tipoCucina) => (
-                    <Tag className='tipo' borderRadius={'1rem'} size={'lg'} key={tipoCucina} variant='solid' background='#3080e8'>
+                    <Tag className='tipo' borderRadius={'1rem'} size={'lg'} key={tipoCucina} variant='solid' background='#ffc244'>
                     {tipoCucina}
                     </Tag>
                 ))}

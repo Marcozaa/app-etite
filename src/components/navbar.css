@@ -10,9 +10,9 @@
   padding: 1rem;
 }
 .centerBar {
-  width: 20%;
+  width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 @media only screen and (max-width: 900px) {
   .centerBar {
@@ -23,7 +23,8 @@
     font-size: 1.3vw;
   }
 }
-.navbar > h1 {
+.logo > h1 {
+  font-weight: 300;
 }
 .navbar > .logo {
   width: 10%;

@@ -13,27 +13,25 @@ import {
 import { Navbar } from './components/Navbar';
 import Header from './components/Header';
 import Cards from './components/Cards';
-import Link from 'next/link';
 import About from './pages/About';
 import MiddleContent from './components/MiddleContent';
 import Others from './components/Others';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Home from './pages/Home';
 function App() {
   return (
     <ChakraProvider theme={theme}>
 
-      <Navbar />
-   
-   
-        <Header />
-        <Cards/>
-        {/*
-        <Link href="/about">
-          <About />
-        </Link>
-        */}
-        <MiddleContent />
-        <Others />
+      
+   <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="expenses" element={<MiddleContent />} />
+      <Route path="invoices" element={<MiddleContent />} />
+    </Routes>
    
     </ChakraProvider>
   );
