@@ -9,7 +9,7 @@ import RequisitiRider from '../components/RequisitiRider';
 import Footer from '../components/Footer';
 export default function RegistrazioneRider() {
   return <div>
-      <Navbar />
+      
       <ContainerRegistrazioneRider />
       <div className="middle">
       <RequisitiRider/>

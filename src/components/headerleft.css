@@ -5,21 +5,34 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 2vw;
-
+  padding: 6vw;
   width: 50%;
 }
 .containerLeft > h1 {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
-  font-size: 3vw;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .containerLeft > h1 {
+    font-size: 1rem;
+  }
 }
 
 .containerLeft > p {
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 2vw;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .containerLeft > p {
+    font-size: 1rem;
+  }
+  .containerLeft > h1 {
+    font-size: 1.8rem;
+  }
 }
 .containerLeft > Button {
   margin-top: 1rem;

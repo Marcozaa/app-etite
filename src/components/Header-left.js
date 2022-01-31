@@ -28,14 +28,14 @@ export default function Headerleft() {
   >
      
           
-            <h1>Ordina cosa vuoi mangiare,  <Typewriter
+            <p>Ordina cosa vuoi mangiare,</p> <h1> <Typewriter
   options={{
     strings: ['A casa tua.', 'A lavoro.', 'All’estero.' ],
     autoStart: true,
     loop: true,
   }}
 /></h1>
-            <p>Lorem ipsium lorem ipsium lorem placeholder ipsium.</p>
+            {/*<p>Lorem ipsium lorem ipsium lorem placeholder ipsium.</p>*/}
             <div className="indirizzo">
                 <InputGroup marginRight={'1rem'}>
                     <InputRightElement

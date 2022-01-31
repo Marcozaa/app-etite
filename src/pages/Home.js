@@ -20,9 +20,9 @@ import { Reviews } from '../components/Review';
 import Informazioni from '../components/Informazioni';
 import Footer from '../components/Footer';
 export default function Home() {
-  return (<ChakraProvider theme={theme}>
+  return (
 
-      
+      <div>
    
    
         <Header />
@@ -37,10 +37,14 @@ export default function Home() {
         </Link>
         */}
         <MiddleContent />
+        <div className="low">
+
         <Informazioni />
+                  
+        </div>
         <Others />
         <Footer />
    
-    </ChakraProvider>
+    </div>
   )
 }
