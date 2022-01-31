@@ -22,15 +22,16 @@ import {
   Route
 } from "react-router-dom";
 import Home from './pages/Home';
+import RegistrazioneRider from './pages/RegistrazioneRider';
 function App() {
   return (
     <ChakraProvider theme={theme}>
 
-      
+      <Navbar />
    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="expenses" element={<MiddleContent />} />
-      <Route path="invoices" element={<MiddleContent />} />
+      <Route path="registrazioneRider" element={<RegistrazioneRider />} />
     </Routes>
    
     </ChakraProvider>

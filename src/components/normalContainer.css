@@ -1,0 +1,34 @@
+.normalContainer {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  margin-top: 30vh;
+
+  padding: 1rem;
+}
+.normalContainer > .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.normalContainer > .left > img {
+  width: 20rem;
+}
+.normalContainer > .right {
+  background-image: url('https://riders.deliveroo.it/_nuxt/img/hexagonbg.dcf6f0a.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  width: 50%;
+}
+.normalContainer > .right > h2 {
+  font-size: 2.1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}

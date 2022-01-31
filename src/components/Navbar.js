@@ -1,61 +1,198 @@
-import { useState } from 'react'
+import React from "react";
+
 import {
-  useColorMode,
-  Switch,
+  chakra,
+  Box,
   Flex,
+  useColorModeValue,
+  VisuallyHidden,
+  HStack,
   Button,
+  useDisclosure,
+  VStack,
   IconButton,
-
-} from '@chakra-ui/react'
-import { Menu } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { MenuList, MenuItem } from '@chakra-ui/react'
-import { MenuDivider } from '@chakra-ui/react'
-import { MenuButton } from '@chakra-ui/react'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import { FaHamburger } from 'react-icons/fa'
-import './navbar.css'
+  CloseButton,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  Avatar,
+  Tabs,
+  TabList,
+  Tab,
+  Spacer,
+  ColorModeProvider
+} from "@chakra-ui/react";
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
-import logo from '../appetite_logo.png'
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'
-export const Navbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode()
-  const isDark = colorMode === 'dark'
-  const [display, changeDisplay] = useState('none')
+import './navbar.css'
+import {
+  AiOutlineMenu,
+  AiFillHome,
+  AiOutlineInbox,
+  AiOutlineSearch,
+  AiFillBell,
+  AiOutlineShopping,
+  AiTwotoneShopping,
+} from "react-icons/ai";
+import { BsFillCameraVideoFill, BsInboxFill } from "react-icons/bs";
+
+export function Navbar() {
+  const bg = useColorModeValue("white", "yellowZ.800");
+  const mobileNav = useDisclosure();
+
   return (
-    <div className="navbar">
-  
-  <motion.div className='logo'
-  animate={{ opacity: [0,1] }}
-  transition={{ duration: 0.5 }}
-  >
-    <FaHamburger  className='menuButton'/>
-      <h1>App<span>Etite</span></h1>
-  </motion.div>
-    
-<motion.div className='centerBar'
-  animate={{ x: [400,0], opacity: [0,1] }}
-  transition={{ duration: 0.5 }}
-  >
-   <Menu><MenuButton as={Button} variant="ghost" className='item' >Collabora con noi</MenuButton><MenuList>
-    <MenuItem>Ristoranti</MenuItem>
-    <MenuItem>Lavora con noi</MenuItem>
-    <MenuItem>Appetite for work</MenuItem>
-
-
-  </MenuList></Menu>
-  <Button  variant="ghost">Contatti</Button>
-</motion.div>
-            <div className="infos">
-                          <ColorModeSwitcher justifySelf="flex-end" />
-
-
-                <Button size={'lg'}>
-                    Accedi
+    <Box shadow="md" className="navbar">
+      <chakra.header
+        bg={bg}
+        borderColor="gray.600"
+        borderBottomWidth={1}
+        w="full"
+        px={{ base: 2, sm: 4 }}
+        py={4}
+      >
+        <Flex alignItems="center" justifyContent="space-between" mx="auto">
+          <HStack spacing={4} display="flex" alignItems="center">
+            <Box display={{ base: "inline-flex", md: "none" }}>
+              <IconButton
+                display={{ base: "flex", md: "none" }}
+                aria-label="Open menu"
+                fontSize="20px"
+                color={useColorModeValue("yellow.800", "inherit")}
+                variant="ghost"
+                icon={<AiOutlineMenu />}
+                onClick={mobileNav.onOpen}
+              />
+              <VStack
+              
+                pos="absolute"
+                top={0}
+                left={0}
+                right={0}
+                display={mobileNav.isOpen ? "flex" : "none"}
+                flexDirection="column"
+                p={2}
+                pb={4}
+                m={2}
+                bg={bg}
+                spacing={3}
+                rounded="sm"
+                shadow="sm"
+              >
+                <CloseButton
+                  aria-label="Close menu"
+                  justifySelf="self-start"
+                  onClick={mobileNav.onClose}
+                />
+                <Button w="full" variant="ghost" leftIcon={<AiFillHome />}>
+                  Dashboard
                 </Button>
+                <Button
+                  w="full"
+                  variant="solid"
+                  colorScheme="brand"
+                  leftIcon={<AiOutlineInbox />}
+                >
+                  Inbox
+                </Button>
+                <Button
+                  w="full"
+                  variant="ghost"
+                  leftIcon={<BsFillCameraVideoFill />}
+                >
+                  Videos
+                </Button>
+              </VStack>
+            </Box>
+            <chakra.a
+              href="/"
+              title="Choc Home Page"
+              display="flex"
+              alignItems="center"
+            >
+              Appetite
+              <VisuallyHidden>Choc</VisuallyHidden>
+            </chakra.a>
+            
+          </HStack>
+          <HStack spacing={3} display="flex" alignItems="center">
+            <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
+              <Button variant="ghost" leftIcon={<AiFillHome />} size="sm">
+                Home
+              </Button>
+              <Button
+                variant="ghost"
+            
+                leftIcon={<BsInboxFill />}
+                size="sm"
+              >
+                Notifiche
+              </Button>
+              <Button
+                variant="ghost"
+                leftIcon={<AiTwotoneShopping />}
+                size="sm"
+              >
+                Ordini
+              </Button>
+            </HStack>
+            <chakra.a
+              p={3}
+              color={useColorModeValue("gray.800", "inherit")}
+              rounded="sm"
+              _hover={{ color: useColorModeValue("gray.800", "gray.600") }}
+            >
+              <AiFillBell />
+              <VisuallyHidden>Notifications</VisuallyHidden>
+            </chakra.a>
 
-            </div>
-    </div>
-  )
+            <Avatar
+              size="sm"
+              name="Dan Abrahmov"
+              src="https://primochef.it/wp-content/uploads/2019/06/CS_Carlo_Cracco-1200x800.jpg"
+            />
+            <ColorModeSwitcher />
+          </HStack>
+        </Flex>
+      </chakra.header>
+      <Flex
+        alignItems="center"
+        justifyContent="space-between"
+        mx={2}
+        borderWidth={0}
+        overflowX="auto"
+      >
+        <Tabs defaultIndex={1} borderBottomColor="transparent">
+          <TabList>
+            <Tab py={4} m={0} _focus={{ boxShadow: "none" }}>
+              Base
+            </Tab>
+            <Tab py={4} m={0} _focus={{ boxShadow: "none" }}>
+              Integrazioni
+            </Tab>
+            <Tab py={4} m={0} _focus={{ boxShadow: "none" }}>
+              Notifiche
+            </Tab>
+            <Tab py={4} m={0} _focus={{ boxShadow: "none" }}>
+              Uso
+            </Tab>
+            <Tab py={4} m={0} _focus={{ boxShadow: "none" }}>
+              Indirizzi
+            </Tab>{" "}
+            <Tab isDisabled py={4} m={0}>
+              Avanzate
+            </Tab>
+          </TabList>
+        </Tabs>
+        <Spacer />
+        <HStack spacing={3} alignItems="center">
+          <InputGroup display={{ base: "none", lg: "block" }} ml="auto">
+            <InputLeftElement
+              pointerEvents="none"
+              children={<AiOutlineSearch />}
+            />
+            <Input type="tel" placeholder="Cerca..." />
+          </InputGroup>
+        </HStack>
+      </Flex>
+    </Box>
+  );
 }

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+.requisiti {
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  background-color: #ffc244;
+  display: flex;
+}
+.content > .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  width: 50%;
+}
+.content > .left > .option,
+.content > .right > .box > .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+.content > .left > h2,
+.content > .right > .box > h2 {
+  font-size: 2.1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+.content > .left > .option > img {
+  width: 70px;
+  margin: 1rem;
+}
+.content > .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > .right > .box {
+  background-color: white;
+  width: 100%;
+  height: 80%;
+  border-radius: 0.6rem;
+  margin: 2rem;
+  padding: 4rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content > .right > .box > .check > img {
+  width: 25px;
+  margin: 1.5rem;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import './sponsors.css'
 import { motion } from 'framer-motion'
+import BubbleCategory from './BubbleCategory'
 
 export default function Sponsors() {
     return (
@@ -9,13 +10,13 @@ export default function Sponsors() {
   transition={{ duration: 1 }}
   >
       
-          <img className='big' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/2339px-McDonald%27s_Golden_Arches.svg.png' />
-          <img src='https://loghi-famosi.com/wp-content/uploads/2020/08/Burger-King-Logo-1994-1999.png' />
-          <img src='https://loghi-famosi.com/wp-content/uploads/2020/04/KFC-Logo-2014-2018.png' />
-          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/InNOut.svg/1200px-InNOut.svg.png' />
-          <img src='https://www.grom.it/images/grom-logo.png' />
-          {/*<img className='big' src='https://www.pngall.com/wp-content/uploads/8/Restaurant-Logo-PNG-Free-Image.png' />*/}
-          
+        <BubbleCategory nome={'Messicano'} posizione={1} immagine={'https://images.unsplash.com/photo-1582169296194-e4d644c48063?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1300&q=80'}/>
+        <BubbleCategory nome={'Italiano'}  posizione={2} immagine={'https://images.unsplash.com/photo-1498579150354-977475b7ea0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'}/>
+        <BubbleCategory nome={'Dessert'}  posizione={3} immagine={'https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80'}/>
+        <BubbleCategory nome={'Sushi'}  posizione={4} immagine={'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'}/>
+        <BubbleCategory nome={'Pizza'}  posizione={5} immagine={'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'}/>
+        <BubbleCategory nome={'Colazione'}  posizione={6} immagine={'https://images.unsplash.com/photo-1513442542250-854d436a73f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1247&q=80'}/>
+
         </motion.div>
     )
 }
