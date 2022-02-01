@@ -10,6 +10,7 @@ import {
   Button,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 export default function RequisitiRider() {
   const Feature = (props) => {
     return (
@@ -79,14 +80,14 @@ export default function RequisitiRider() {
               Inizia a guadagnare consegnando piatti per appetite.
             </chakra.p>
             <Button
-              as="a"
+              
               
               variant="solid"
               w={{ base: "full", sm: "auto" }}
-              colorScheme="brand"
+              
               size="lg"
             >
-              Become a Partner
+              <Link to="formRider"> Candidati subito</Link>
             </Button>
           </Box>
           <VStack
