@@ -1,5 +1,11 @@
+
+import {FormRegistrazione} from '../components/FormRegistrazione'
 const Form = () => {
-    return (  <div>oklesgo</div>);
+    return (  
+    <div>
+       <FormRegistrazione />
+    </div>
+    );
 }
  
 export default Form;

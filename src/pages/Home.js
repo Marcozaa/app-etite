@@ -19,6 +19,7 @@ import Others from '../components/Others';
 import { Reviews } from '../components/Review';
 import Informazioni from '../components/Informazioni';
 import Footer from '../components/Footer';
+import Form from './FormRegistrazioneRider';
 export default function Home() {
   return (
 
@@ -29,6 +30,7 @@ export default function Home() {
     
           <Cards/>
         
+   
         
         <Reviews />
         {/*

@@ -184,13 +184,7 @@ export function Navbar() {
         </Tabs>
         <Spacer />
         <HStack spacing={3} alignItems="center">
-          <InputGroup display={{ base: "none", lg: "block" }} ml="auto">
-            <InputLeftElement
-              pointerEvents="none"
-              children={<AiOutlineSearch />}
-            />
-            <Input type="tel" placeholder="Cerca..." />
-          </InputGroup>
+          
         </HStack>
       </Flex>
     </Box>

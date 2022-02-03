@@ -23,7 +23,8 @@ import {
 } from "react-router-dom";
 import Home from './pages/Home';
 import RegistrazioneRider from './pages/RegistrazioneRider';
-import { FormRider } from './pages/FormRider';
+
+import Form from './pages/FormRegistrazioneRider';
 function App() {
   return (
     <ChakraProvider theme={theme}>
@@ -33,7 +34,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="expenses" element={<MiddleContent />} />
       <Route path="registrazioneRider" element={<RegistrazioneRider />} />
-      <Route path="formRider" element={<FormRider />} />
+      <Route path="registrazioneRider/formRider" element={<Form />} />
     </Routes>
    
     </ChakraProvider>

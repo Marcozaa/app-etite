@@ -27,7 +27,9 @@ import {
 } from "@chakra-ui/react";
 import { FaUser } from "react-icons/fa";
 import { motion } from "framer-motion";
-export default function FormRegistrazione() {
+import { useToast } from '@chakra-ui/react'
+export function FormRegistrazione() {
+  const toast = useToast()
   return (
     <Box bg={useColorModeValue("gray.50", "inherit")} p={10}>
       <Box>
@@ -120,6 +122,30 @@ export default function FormRegistrazione() {
                       rounded="md"
                     />
                   </FormControl>
+
+                  <FormControl as={GridItem} colSpan={[6, 3]}>
+                    <FormLabel
+                      htmlFor="mail"
+                      fontSize="sm"
+                      fontWeight="md"
+                      color={useColorModeValue("gray.700", "gray.50")}
+                    >
+                      Email
+                    </FormLabel>
+                    <Input
+                      type="mail"
+                      name="mail"
+                      id="mail"
+                      autoComplete="mail"
+                      placeholder="nome@provider.com"
+                      mt={1}
+                      focusBorderColor="brand.400"
+                      shadow="sm"
+                      size="sm"
+                      w="full"
+                      rounded="md"
+                    />
+                  </FormControl>
                   </SimpleGrid>
                 <SimpleGrid columns={3} spacing={6}>
                   <FormControl as={GridItem} colSpan={[3, 2]}>
@@ -128,18 +154,12 @@ export default function FormRegistrazione() {
                       fontWeight="md"
                       color={useColorModeValue("gray.700", "gray.50")}
                     >
-                      Sito web*
+                      Città
                     </FormLabel>
                     <InputGroup size="sm">
-                      <InputLeftAddon
-                        children="http://"
-                        bg={useColorModeValue("gray.50", "gray.800")}
-                        color={useColorModeValue("gray.500", "gay.50")}
-                        rounded="md"
-                      />
                       <Input
                         type="tel"
-                        placeholder="www.example.com"
+                        placeholder="Milano"
                         focusBorderColor="brand.400"
                         rounded="md"
                       />
@@ -285,7 +305,17 @@ export default function FormRegistrazione() {
                 bg={useColorModeValue("gray.50", "gray.900")}
                 textAlign="right"
               >
-                <Button size='lg' >
+                <Button 
+                size='lg'
+                onClick={() =>
+                toast({
+                  title: 'Account creato.',
+                  description: "Controlla la mail.",
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+                })}
+                 >
                   Continua
                 </Button>
               </Box>

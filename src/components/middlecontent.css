@@ -9,6 +9,7 @@
 .middlecontent > .col2 {
   margin: 1rem;
   display: flex;
+  color: white;
 }
 .middlecontent > .container {
   width: 100%;
